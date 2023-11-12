@@ -44,10 +44,10 @@ public class UserService {
 
     public void delete(int id) {
         User finduser = this.findById(id);
-        if (this.findById(id) == null) {
+        if (finduser == null) {
             throw new RuntimeException("User not found!");
         } else {
-            findAllUser().remove(0);
+           this.userRepository.delete(finduser);
         }
     }
 }
