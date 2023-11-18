@@ -1,0 +1,22 @@
+<div class="container">
+    <h2 class="text-center">Update User</h2>
+    <form (ngSubmit)="onSubmit()">
+    <div class="Form-group">
+        <label for="firstname">First Name</label>
+        <input type="text" class="form-control" id="firstname" [(ngModel)]= "user.firstname " name="firstname">
+    </div>
+    <div class="Form-group">
+        <label for="lastname">Last Name</label>
+        <input type="text" class="form-control" id="lastname" [(ngModel)]= "user.lastname" name="lastname">
+    </div>
+    <div class="Form-group">
+        <label for="username">Username</label>
+        <input type="text" class="form-control" id="username" [(ngModel)]= "user.username" name="username">
+    </div>
+    <div class="Form-group">
+        <label for="password">Password</label>
+        <input type="text" class="form-control" id="password" [(ngModel)]= "user.password" name="password">
+    </div>
+    <button class="btn btn-success mt-2" type="submit">Update</button>
+    </form>
+</div>

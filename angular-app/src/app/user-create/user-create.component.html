@@ -1,0 +1,24 @@
+<div class="container">
+    <h2 class="Text center">Create User</h2>
+    <form (ngSubmit)= "onSubmit()">
+        <div class="Form-group">
+            <label for="FirstName">FirstName</label>
+            <input type="text" class="form-control" id="FirstName" [(ngModel)]= "user.firstname" name="FirstName">
+        </div>
+        <div class="Form-group">
+            <label for="LastName">LastName</label>
+            <input type="text" class="form-control" id="LastName" [(ngModel)]= "user.lastname" name="LastName">
+        </div>
+        <div class="Form-group">
+            <label for="Username">Username</label>
+            <input type="text" class="form-control" id="Username" [(ngModel)]= "user.username" name="Username">
+        </div>
+        <div class="Form-group">
+            <label for="Password">Password</label>
+            <input type="text" class="form-control" id="Password" [(ngModel)]= "user.password" name="Password">
+        </div>
+
+    
+    
+    </form>
+</div>
