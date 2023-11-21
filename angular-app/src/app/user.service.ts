@@ -6,21 +6,26 @@ import { User } from "./user.model";
 @Injectable()
 export class UserService {
     private basurl = "http://localhost:8080/user"
-    constructor(private httpClient: HttpClient) {
-    }
+    constructor(private httpClient: HttpClient) {}
+    
     getUserList(): Observable<User[]> {
         return this.httpClient.get<User[]>(this.basurl);
     }
-    createUser(user: User): Observable<object> {
-        return this.httpClient.post(`${this.basurl}`, user);
+    
+    createUser(user: User): Observable<User> {
+        return this.httpClient.post<User>(`${this.basurl}`, user);
     }
+    
     getUserbyID(id: number): Observable<User> {
         return this.httpClient.get<User>(`${this.basurl}/${id}`);
     }
-    updateUser(id: number, user: User): Observable<object> {
-        return this.httpClient.put(`${this.basurl}/${id}`, user);
+    
+    
+    updateUser(id: number, user: User): Observable<User> {
+        return this.httpClient.put<User>(`${this.basurl}/${id}`, user);
     }
-    deleteUSer(id: number): Observable<object> {
-        return this.httpClient.delete(`${this.basurl}/${id}`);
+    
+    deleteUser(id: number): Observable<void> {
+        return this.httpClient.delete<void>(`${this.basurl}/${id}`);
     }
 }

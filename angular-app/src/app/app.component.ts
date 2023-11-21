@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule, RouterOutlet } from '@angular/router';
 import { NgModule } from "@angular/core";
 import { HttpClientModule } from '@angular/common/http';
 import { UserService } from './user.service';
@@ -11,7 +11,7 @@ import { BrowserModule } from '@angular/platform-browser';
   selector: 'app-root',
   standalone: true,
   providers:[HttpClientModule, UserService],
-  imports: [ RouterOutlet, HttpClientModule, CommonModule],
+  imports: [ RouterOutlet, HttpClientModule, CommonModule, RouterModule],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
