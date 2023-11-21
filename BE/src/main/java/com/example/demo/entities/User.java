@@ -4,7 +4,6 @@ package com.example.demo.entities;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-import org.springframework.data.annotation.Id;
 
 @Entity
 @Table(name = "TBL_USERS")
@@ -17,9 +16,9 @@ public class User {
     private int id;
 
     @Column
-    private String firstName;
+    private String firstname;
     @Column
-    private String lastName;
+    private String lastname;
     @Column
     private String username;
     @Column

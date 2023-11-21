@@ -16,7 +16,7 @@ public class UserService {
     private final UserUtils userUtils;
 
     public User insert(User user) {
-        return this.userRepository.save(user);
+            return this.userRepository.save(user);
     }
 
     public List<User> findAllUser() {

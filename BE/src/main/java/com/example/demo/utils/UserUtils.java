@@ -6,8 +6,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserUtils {
     public void update(User oldUser, User user){
-        oldUser.setFirstName(user.getFirstName());
-        oldUser.setLastName(user.getLastName());
+        oldUser.setFirstname(user.getFirstname());
+        oldUser.setLastname(user.getLastname());
         oldUser.setPassword(user.getPassword());
         oldUser.setUsername(user.getUsername());
     }
